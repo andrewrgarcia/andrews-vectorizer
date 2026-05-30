@@ -36,10 +36,6 @@ Convert logos, illustrations, mascots, sprites, UI assets, sketches, and photos 
 
 Using Blorbo, because every respectable software project eventually develops a mascot.
 
-| Input PNG | Output SVG |
-|------------|------------|
-| ![](examples/blorbo_wow.png) | ![](examples/blorbo_wow.svg) |
-
 ---
 
 ## Quick Start

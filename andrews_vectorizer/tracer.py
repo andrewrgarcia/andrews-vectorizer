@@ -1,9 +1,6 @@
 import vtracer
-import re
-import time
 
-from .modes import MODES
-from .utils import img_to_bytes, load_image
+from .utils import img_to_bytes
 
 def vectorize(img, colormode="color", **kw):
     return vtracer.convert_raw_image_to_svg(
@@ -21,18 +18,3 @@ def vectorize(img, colormode="color", **kw):
         splice_threshold=kw.get("splice_threshold", 45),
         path_precision=kw.get("path_precision", 3),
     )
-
-
-
-def run(input_path, output_path, mode, **kwargs):
-    img = load_image(input_path)
-    w, h = img.size
-    t0 = time.time()
-    svg = MODES[mode]["fn"](img, dict(kwargs))
-    elapsed = time.time() - t0
-    with open(output_path, "w", encoding="utf-8") as f:
-        f.write(svg)
-    paths = len(re.findall(r"<path", svg))
-    kb = round(len(svg.encode()) / 1024, 1)
-    print(f"  {mode:12s} → {output_path}  [{elapsed:.2f}s | {paths} paths | {kb} KB]")
-    return svg

@@ -3,7 +3,7 @@ import os
 import argparse
 
 from .modes import MODES
-from .tracer import run
+from .runner import run
 
 def main():
     parser = argparse.ArgumentParser(description="PNG → SVG vectorizer")

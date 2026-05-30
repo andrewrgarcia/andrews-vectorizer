@@ -1,7 +1,7 @@
 [project]
 name = "andrews-vectorizer"
 version = "0.1.0"
-description = "Add your description here"
+description = "Convert raster images into clean SVG vector graphics."
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
@@ -12,3 +12,6 @@ dependencies = [
     "svgwrite>=1.4.3",
     "vtracer>=0.6.15",
 ]
+
+[tool.setuptools.packages.find]
+include = ["andrews_vectorizer*"]
