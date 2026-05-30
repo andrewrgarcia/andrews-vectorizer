@@ -10,7 +10,11 @@ Just:
 uv run vectorizer.py image.png
 ```
 
-![Andrew's Vectorizer](examples/blorbo_demo.png)
+<p align="center">
+<img width="802"  alt="comparison" src="https://github.com/user-attachments/assets/09295f46-a57c-4410-960b-5433e9a20e3d" />  
+</p>
+
+
 
 Convert logos, illustrations, mascots, sprites, UI assets, sketches, and photos into scalable SVGs using multiple preprocessing pipelines and VTracer's spline-based vectorization.
 
